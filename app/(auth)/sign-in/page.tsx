@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import InputFields from '@/components/forms/inputFields'
 import FooterLink from '@/components/forms/FooterLinks';
 import { useRouter } from "next/navigation";
+import { signInWithEmail } from '@/lib/actions/auth.action';
 
 const SignIn = () => {
   const router = useRouter()
@@ -19,13 +20,14 @@ const SignIn = () => {
     },
     mode: 'onBlur',
   });
-    const onSubmit = async (data: SignInFormData) => {
-        try {
-
-        } catch (error) {
-            console.log(error)
-        }
-    }
+   const onSubmit = async (data: SignInFormData) => {
+         try {
+              const result=signInWithEmail(data)
+            if((await result).success)  router.push("/")
+         } catch (error) {
+             console.log(error)
+         }
+     }
 
   return (
     <div>

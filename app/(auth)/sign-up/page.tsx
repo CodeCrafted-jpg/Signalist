@@ -5,11 +5,14 @@ import FooterLink from "@/components/forms/FooterLinks"
 import InputFields from '@/components/forms/inputFields'
 import SelectFields from '@/components/forms/SelectFields'
 import { Button } from '@/components/ui/button'
+import { signUpWithEmail } from "@/lib/actions/auth.action"
 import { INVESTMENT_GOALS, PREFERRED_INDUSTRIES, RISK_TOLERANCE_OPTIONS } from '@/lib/constamts'
+import { useRouter } from "next/navigation"
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
 const SignUp = () => {
+    const router=useRouter() 
     const {
         register,
         handleSubmit,
@@ -33,7 +36,8 @@ const SignUp = () => {
     )
     const onSubmit = async (data: SignUpFormData) => {
         try {
-
+             const result=signUpWithEmail(data)
+           if((await result).success)  router.push("/")
         } catch (error) {
             console.log(error)
         }
