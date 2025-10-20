@@ -40,7 +40,7 @@ const SignIn = () => {
       <InputFields
         name="email"
         label="Email"
-        placeholder="contact@jsmastery.com"
+        placeholder="name@gmail.com"
         register={register}
         error={errors.email}
         validation={{ required: 'Email name is required', pattern: /^\w+@\w+\.\w+$/, message: 'Email address is required' }}

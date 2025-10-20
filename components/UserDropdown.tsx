@@ -28,7 +28,7 @@ const UserDropdown = ({ user, initialStocks }: {user: User, initialStocks: Stock
             <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="flex items-center gap-3 text-gray-4 hover:text-yellow-500">
                     <Avatar className="h-8 w-8">
-                        <AvatarImage src="https://avatars.githubusercontent.com/u/153423955?s=280&v=4" />
+                        <AvatarImage src="https://thvnext.bing.com/th/id/OIP.N1s0rnteZJ01Qodye46a7AHaEK?w=272&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" />
                         <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
                             {user.name[0]}
                         </AvatarFallback>
@@ -44,7 +44,7 @@ const UserDropdown = ({ user, initialStocks }: {user: User, initialStocks: Stock
                 <DropdownMenuLabel>
                     <div className="flex relative items-center gap-3 py-2">
                         <Avatar className="h-10 w-10">
-                            <AvatarImage src="https://avatars.githubusercontent.com/u/153423955?s=280&v=4" />
+                            <AvatarImage src="https://thvnext.bing.com/th/id/OIP.N1s0rnteZJ01Qodye46a7AHaEK?w=272&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" />
                             <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
                                 {user.name[0]}
                             </AvatarFallback>
